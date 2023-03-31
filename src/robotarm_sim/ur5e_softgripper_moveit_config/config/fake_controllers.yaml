@@ -1,0 +1,31 @@
+controller_list:
+  - name: fake_manipulator_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - shoulder_pan_joint
+      - shoulder_lift_joint
+      - elbow_joint
+      - wrist_1_joint
+      - wrist_2_joint
+      - wrist_3_joint
+  - name: fake_gripper_servo_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - servo_1_joint
+      - servo_2_joint
+      - servo_3_joint
+      - servo_4_joint
+  - name: fake_gripper_finger_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - finger_1_joint
+      - finger_2_joint
+      - finger_3_joint
+      - finger_4_joint
+initial:  # Define initial robot poses per group
+  - group: manipulator
+    pose: AllZeros
+  - group: gripper_servo
+    pose: Perpendicular
+  - group: gripper_finger
+    pose: Open

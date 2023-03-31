@@ -1,0 +1,102 @@
+joint_state_controller:
+  type: joint_state_controller/JointStateController
+  publish_rate: &loop_hz 125
+
+manipulator_controller:
+  type: position_controllers/JointTrajectoryController
+  joints:
+    - shoulder_pan_joint
+    - shoulder_lift_joint
+    - elbow_joint
+    - wrist_1_joint
+    - wrist_2_joint
+    - wrist_3_joint
+  gains:
+    shoulder_pan_joint:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    shoulder_lift_joint:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    elbow_joint:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    wrist_1_joint:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    wrist_2_joint:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    wrist_3_joint:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+
+gripper_servo_controller:
+  type: position_controllers/JointTrajectoryController
+  joints:
+    - servo_1_joint
+    - servo_2_joint
+    - servo_3_joint
+    - servo_4_joint
+  gains:
+    servo_1_joint:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    servo_2_joint:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    servo_3_joint:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    servo_4_joint:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+
+gripper_finger_controller:
+  type: position_controllers/JointTrajectoryController
+  joints:
+    - finger_1_joint
+    - finger_2_joint
+    - finger_3_joint
+    - finger_4_joint
+  gains:
+    finger_1_joint:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    finger_2_joint:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    finger_3_joint:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    finger_4_joint:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1

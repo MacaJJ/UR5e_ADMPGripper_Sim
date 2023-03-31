@@ -1,0 +1,8 @@
+prefix=/home/justin/admp_ur5e_sim_ws/devel
+
+Name: ur5e_description
+Description: Description of ur5e_description
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

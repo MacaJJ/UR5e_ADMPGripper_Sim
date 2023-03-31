@@ -1,0 +1,8 @@
+prefix=/home/justin/admp_ur5e_sim_ws/install
+
+Name: soft_gripper
+Description: Description of soft_gripper
+Version: 1.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

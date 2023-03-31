@@ -1,0 +1,2 @@
+set(object_msgs_MESSAGE_FILES "/home/justin/admp_ur5e_sim_ws/src/robotarm_sim/general-message-pkgs/object_msgs/msg/Object.msg;/home/justin/admp_ur5e_sim_ws/src/robotarm_sim/general-message-pkgs/object_msgs/msg/ObjectPose.msg")
+set(object_msgs_SERVICE_FILES "/home/justin/admp_ur5e_sim_ws/src/robotarm_sim/general-message-pkgs/object_msgs/srv/ObjectInfo.srv;/home/justin/admp_ur5e_sim_ws/src/robotarm_sim/general-message-pkgs/object_msgs/srv/RegisterObject.srv")

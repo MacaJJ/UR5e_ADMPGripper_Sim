@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+	<gazebo reference="mount">
+		<mu1>0.2</mu1>
+		<mu2>0.2</mu2>
+		<material>Gazebo/Orange</material>
+	</gazebo>
+	
+	<gazebo reference="gripper_base_link">
+		<mu1>0.9</mu1>
+		<mu2>0.9</mu2>
+		<material>Gazebo/FlatBlack</material>
+	</gazebo>
+	
+	<gazebo reference="gripper_camera_link">
+		<mu1>0.9</mu1>
+		<mu2>0.9</mu2>
+		<material>Gazebo/FlatBlack</material>
+	</gazebo>
+	
+	<gazebo reference="servo_1_link">
+		<mu1>0.9</mu1>
+		<mu2>0.9</mu2>
+		<material>Gazebo/Green</material>
+	</gazebo>
+	
+	<gazebo reference="servo_2_link">
+		<mu1>0.9</mu1>
+		<mu2>0.9</mu2>
+		<material>Gazebo/Green</material>
+	</gazebo>
+	
+	<gazebo reference="servo_3_link">
+		<mu1>0.9</mu1>
+		<mu2>0.9</mu2>
+		<material>Gazebo/Green</material>
+	</gazebo>
+	
+	<gazebo reference="servo_4_link">
+		<mu1>0.9</mu1>
+		<mu2>0.9</mu2>
+		<material>Gazebo/Green</material>
+	</gazebo>
+
+	<!-- Gazebo grasping plugin -->
+	<gazebo>
+		<plugin name="gazebo_grasp_fix" filename="libgazebo_grasp_fix.so">
+			<arm>
+				<arm_name>manipulator</arm_name>
+				<palm_link>wrist_3_link</palm_link>
+				<gripper_link>finger_1_link</gripper_link>
+				<gripper_link>finger_2_link</gripper_link>
+				<gripper_link>finger_3_link</gripper_link>
+				<gripper_link>finger_4_link</gripper_link>
+			</arm>
+			<forces_angle_tolerance>100</forces_angle_tolerance>
+			<update_rate>4</update_rate>
+			<grip_count_threshold>4</grip_count_threshold>
+			<max_grip_count>8</max_grip_count>
+			<release_tolerance>0.005</release_tolerance>
+			<disable_collisions_on_attach>false</disable_collisions_on_attach>
+			<contact_topic>__default_topic__</contact_topic>
+		</plugin>
+	</gazebo>
+
+</robot>
